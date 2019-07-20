@@ -10,18 +10,14 @@ type: Document
 # Docs API portal dành cho User.
 
 ## 1. API xác thực
+
 ### 1. Tạo mới Token.
 
 - Phương thức: POST
 - Đường dẫn: http://portalurl/api/v1/auth/tokens
 - Tham số:
 
-| Tên biến | Vị trí | Kiểu dữ liệu | Mô tả |
-|----------|--------|--------------|-------|
-| email(*) | Body | Email | Email đăng nhập vào portal |
-| password(*) | Body | String | Mật khẩu đăng nhập vào portal của tài khoản muốn lấy token |
-| expired | Body | Integer | Nhập số giờ tồn tại của Token |
-| project_id | Body | String | Nếu như tài khoản có nhiều hơn một project cần nhập project để chỉ định project thao tác |
+![scr1](/images/img-api/scr1.png)
 
 - Request mẫu:
 
@@ -72,16 +68,7 @@ type: Document
 - Đường dẫn: http://portalurl/api/v1/server/
 - Tham số:
 
-| Tên biến | Vị trí | Kiểu dữ liệu | Mô tả |
-|----------|--------|--------------|-------|
-| page | Query | Integer | Nhập trang muốn xem |
-| page_size | Query | Integer | Số lượng phần tử hiển thị tối đa trên một trang |
-| server_id | Query | String | Tìm theo server ID |
-| server_ip | Query | String | Tìm theo địa chỉ IP |
-| server_name | Query | String | Tìm theo tên máy chủ ảo|
-| server_status | Query | String | Tìm theo trạng thái của máy chủ ảo |
-| server_expired | Query | String | Tìm theo thời gian hết hạn của máy chủ ảo |
-| server_created | Query | String | Tìm theo thời gian khởi tạo của máy chủ ảo |
+![scr2](/images/img-api/scr2.png)
 
 - Respone mẫu:
 
@@ -113,9 +100,7 @@ type: Document
 - Đường dẫn: http://portalurl/api/v1/server/{instance_id}/
 - Tham số:
 
-| Tên biến | Vị trí | Kiểu dữ liệu | Mô tả |
-|----------|--------|--------------|-------|
-| instance_id(*) | Path | String | server_id của máy chủ ảo muốn xem thông tin chi tiết |
+![scr3](/images/img-api/scr3.png)
 
 - Respone mẫu:
 
@@ -140,11 +125,7 @@ type: Document
 - Đường dẫn: http://portalurl/api/v1/server/{instance_id}/change_password/
 - Tham số:
 
-| Tên biến | Vị trí | Kiểu dữ liệu | Mô tả |
-|----------|--------|--------------|-------|
-| instance_id(*) | Path | String | server_id của máy chủ ảo muốn thay đổi mật khẩu|
-| password(*) | Body | String | Mật khẩu muốn thay đổi |
-| re_password(*) | Body | String | Nhập lại mật khẩu muốn thay đổi |
+![scr4](/images/img-api/scr4.png)
 
 - Request mẫu:
 
@@ -169,9 +150,7 @@ type: Document
 - Đường dẫn: http://portalurl/api/v1/server/{instance_id}/console/
 - Tham số:
 
-| Tên biến | Vị trí | Kiểu dữ liệu | Mô tả |
-|----------|--------|--------------|-------|
-| instance_id(*) | Path | String | server_id của máy chủ ảo muốn lấy thông tin đường dẫn console|
+![scr5](/images/img-api/scr5.png)
 
 - Respone mẫu:
 
@@ -190,9 +169,7 @@ type: Document
 - Đường dẫn: http://portalurl/api/v1/server/{instance_id}/get_console_log/
 - Tham số:
 
-| Tên biến | Vị trí | Kiểu dữ liệu | Mô tả |
-|----------|--------|--------------|-------|
-| instance_id(*) | Path | String | server_id của máy chủ ảo muốn lấy thông tin console log |
+![scr6](/images/img-api/scr6.png)
 
 - Respone mẫu:
 
@@ -208,9 +185,7 @@ type: Document
 - Đường dẫn: http://portalurl/api/v1/server/{instance_id}/list_volume_attached/
 - Tham số:
 
-| Tên biến | Vị trí | Kiểu dữ liệu | Mô tả |
-|----------|--------|--------------|-------|
-| instance_id(*) | Path | String | server_id của máy chủ ảo muốn lấy thông tin các volume gắn vào |
+![scr7](/images/img-api/scr7.png)
 
 - Respone mẫu:
 
@@ -232,9 +207,7 @@ type: Document
 - Đường dẫn: http://portalurl/api/v1/server/{instance_id}/reboot/
 - Tham số:
 
-| Tên biến | Vị trí | Kiểu dữ liệu | Mô tả |
-|----------|--------|--------------|-------|
-| instance_id(*) | Path | String | server_id của máy chủ ảo muốn khởi động lại |
+![scr8](/images/img-api/scr8.png)
 
 - Respone mẫu:
 
@@ -250,9 +223,7 @@ type: Document
 - Đường dẫn: http://portalurl/api/v1/server/{instance_id}/start/
 - Tham số:
 
-| Tên biến | Vị trí | Kiểu dữ liệu | Mô tả |
-|----------|--------|--------------|-------|
-| instance_id(*) | Path | String | server_id của máy chủ ảo muốn khởi động |
+![scr9](/images/img-api/scr9.png)
 
 - Respone mẫu:
 
@@ -268,9 +239,7 @@ type: Document
 - Đường dẫn: http://portalurl/api/v1/server/{instance_id}/stop/
 - Tham số:
 
-| Tên biến | Vị trí | Kiểu dữ liệu | Mô tả |
-|----------|--------|--------------|-------|
-| instance_id(*) | Path | String | server_id của máy chủ ảo muốn tắt |
+![scr10](/images/img-api/scr10.png)
 
 - Respone mẫu:
 
@@ -286,10 +255,7 @@ type: Document
 - Đường dẫn: http://portalurl/api/v1/server/{instance_id}/rename/
 - Tham số:
 
-| Tên biến | Vị trí | Kiểu dữ liệu | Mô tả |
-|----------|--------|--------------|-------|
-| instance_id(*) | Path | String | server_id của máy chủ ảo muốn đổi tên |
-| server_name(*) | Body | String | Tên máy chủ ảo muốn thay đổi |
+![scr11](/images/img-api/scr11.png)
 
 - Request mẫu:
 
@@ -313,11 +279,7 @@ type: Document
 - Đường dẫn: http://portalurl/api/v1/server/{instance_id}/rebuild/
 - Tham số:
 
-| Tên biến | Vị trí | Kiểu dữ liệu | Mô tả |
-|----------|--------|--------------|-------|
-| instance_id(*) | Path | String | server_id của máy chủ ảo muốn đổi tên |
-| os_image(*) | Body | Integer | ID của hệ điều hành muốn thay đổi |
-
+![scr12](/images/img-api/scr12.png)
 - Request mẫu:
 
 ```sh
@@ -363,14 +325,7 @@ type: Document
 - Đường dẫn: http://portalurl/api/v1/user/update_profile/
 - Tham số:
 
-| Tên biến | Vị trí | Kiểu dữ liệu | Mô tả |
-|----------|--------|--------------|-------|
-| first_name | Body | String | Họ và tên đệm |
-| last_name | Body | String | Tên thật |
-| gender | Body | Integer | Giới tính, 1 => Nam, 2 => Nữ , 3 => Công ty |
-| phone_number | Body | String | Số điện thoại của người sở hữu |
-| address | Body | String | Địa chỉ |
-| company | Body | String | Tên công ty |
+![scr13](/images/img-api/scr13.png)
 
 - Request mẫu:
 
@@ -399,11 +354,7 @@ type: Document
 - Đường dẫn: http://portalurl/api/v1/user/change_password/
 - Tham số:
 
-| Tên biến | Vị trí | Kiểu dữ liệu | Mô tả |
-|----------|--------|--------------|-------|
-| old_password(*) | Body | String | Mật khẩu cũ của tài khoản |
-| new_password(*) | Body | String | Mật khẩu mới muốn thay đổi |
-| re_password(*) | Body | String | Nhập lại mật khẩu mới muốn thay đổi|
+![scr14](/images/img-api/scr14.png)
 
 - Request mẫu:
 
